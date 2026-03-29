@@ -37,6 +37,11 @@ jobs:
       - name: Update submodule to latest
         run: git submodule update --remote
 
+      - name: Debug submodule state
+        run: |
+          cd content
+          git log --oneline -3
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
