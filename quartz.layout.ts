@@ -38,7 +38,15 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        if (a.slugSegment === "build-log") return -1
+        if (b.slugSegment === "build-log") return 1
+        if (a.isFolder && !b.isFolder) return -1
+        if (!a.isFolder && b.isFolder) return 1
+        return a.slugSegment.localeCompare(b.slugSegment)
+      },
+    }),
   ],
   right: [
     Component.Graph(),
