@@ -12,7 +12,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "jasmine-nguyen.github.io/quartz",
-    ignorePatterns: ["private", "templates", ".obsidian", "career", "finance"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
