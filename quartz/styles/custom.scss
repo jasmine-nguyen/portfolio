@@ -1,3 +1,22 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// Sidebar width
+.left.sidebar {
+  width: 380px !important;
+  flex: 0 0 380px !important;
+}
+
+// Font weight adjustments
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+body, p, li {
+  font-weight: 400;
+}
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
